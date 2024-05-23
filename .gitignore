@@ -2,11 +2,14 @@ dataproc/*.tfstate
 dataproc/.terraform/
 dataproc/.terraform.lock*
 dataproc/*.tfvars
+dataproc/*backup
 s3/*.tfstate
 s3/.terraform/
 s3/.terraform.lock*
 s3/*.tfvars
+s3/*backup
 *.tfstate
 .terraform/
 .terraform.lock*
 *.tfvars
+*backup
