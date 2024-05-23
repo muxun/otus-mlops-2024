@@ -24,9 +24,9 @@ resource "yandex_dataproc_cluster" "dataproc-cluster" {
       hosts_count = 1 # For MASTERNODE only one hosts assigned
 
       resources {
-        resource_preset_id = "s2.micro"    # 4 vCPU Intel Cascade, 16 GB RAM
+        resource_preset_id = "s3-c2-m8"    # 4 vCPU Intel Cascade, 16 GB RAM
         disk_type_id       = "network-ssd" # Fast network SSD storage
-        disk_size          = 20            # GB
+        disk_size          = 40            # GB
       }
 
     }
@@ -35,12 +35,12 @@ resource "yandex_dataproc_cluster" "dataproc-cluster" {
       name        = "subcluster-data"
       role        = "DATANODE"
       subnet_id   = yandex_vpc_subnet.subnet.id
-      hosts_count = 1
+      hosts_count = 3
 
       resources {
-        resource_preset_id = "s2.micro"    # 4 vCPU, 16 GB RAM
+        resource_preset_id = "s3-c4-m16"    # 4 vCPU, 16 GB RAM
         disk_type_id       = "network-ssd" # Fast network SSD storage
-        disk_size          = 20            # GB
+        disk_size          = 128           # GB
       }
     }
   }
