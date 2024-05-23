@@ -1,0 +1,12 @@
+dataproc/*.tfstate
+dataproc/.terraform/
+dataproc/.terraform.lock*
+dataproc/*.tfvars
+s3/*.tfstate
+s3/.terraform/
+s3/.terraform.lock*
+s3/*.tfvars
+*.tfstate
+.terraform/
+.terraform.lock*
+*.tfvars
